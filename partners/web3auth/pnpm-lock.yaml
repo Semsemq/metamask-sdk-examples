@@ -19,7 +19,7 @@ importers:
         version: 5.76.2(react@19.1.0)
       '@web3auth/modal':
         specifier: 10.0.0
-        version: 10.0.0(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.22.0)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
+        version: 10.0.0(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.22.0)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(supports-color@7.2.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -30,8 +30,8 @@ importers:
         specifier: ^0.487.0
         version: 0.487.0(react@19.1.0)
       next:
-        specifier: 15.3.0
-        version: 15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 15.5.28
+        version: 15.5.28(@types/node@20.17.50)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
         specifier: ^19.0.0
         version: 19.1.0
@@ -49,11 +49,11 @@ importers:
         version: 2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       wagmi:
         specifier: ^2.14.16
-        version: 2.15.4(@tanstack/query-core@5.76.2)(@tanstack/react-query@5.76.2(react@19.1.0))(@types/react@19.1.5)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
+        version: 2.15.4(@tanstack/query-core@5.76.2)(@tanstack/react-query@5.76.2(react@19.1.0))(@types/react@19.1.5)(bufferutil@4.0.9)(react@19.1.0)(supports-color@7.2.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
-        version: 3.3.1
+        version: 3.3.1(supports-color@7.2.0)
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.7
@@ -68,10 +68,10 @@ importers:
         version: 19.1.5(@types/react@19.1.5)
       eslint:
         specifier: ^9
-        version: 9.27.0(jiti@2.4.2)
+        version: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
       eslint-config-next:
         specifier: 15.3.0
-        version: 15.3.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
+        version: 15.3.0(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)
       tailwindcss:
         specifier: ^4
         version: 4.1.7
@@ -116,6 +116,9 @@ packages:
 
   '@emnapi/core@1.4.3':
     resolution: {integrity: sha512-4m62DuCE07lw01soJwPiBGC0nAww0Q+RY70VZ+n49yDIO13yyinhbWCeNnaob0lakDtWQzSdtNWzJeOJt2ma+g==}
+
+  '@emnapi/runtime@1.11.3':
+    resolution: {integrity: sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA==}
 
   '@emnapi/runtime@1.4.3':
     resolution: {integrity: sha512-pBPWdu6MLKROBX05wSNKcNb++m5Er+KQ9QkB+WVM+pW2Kx9hoSrVTnu3BdkI5eBLZoKu/J6mW/B6i6bJB2ytXQ==}
@@ -215,119 +218,165 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@img/sharp-darwin-arm64@0.34.2':
-    resolution: {integrity: sha512-OfXHZPppddivUJnqyKoi5YVeHRkkNE2zUFT2gbpKxp/JZCFYEYubnMg+gOp6lWfasPrTS+KPosKqdI+ELYVDtg==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/colour@1.1.0':
+    resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
+    engines: {node: '>=18'}
+
+  '@img/sharp-darwin-arm64@0.35.5':
+    resolution: {integrity: sha512-QRUlFQ0WxvdWyqqG/WtI3iupfD5rBzmCHXSdPsY91sAtVtTo7Q4cb6zOccZ3gqEqkr0f1As1ehLqmEpDsRf+lg==}
+    engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [darwin]
 
-  '@img/sharp-darwin-x64@0.34.2':
-    resolution: {integrity: sha512-dYvWqmjU9VxqXmjEtjmvHnGqF8GrVjM2Epj9rJ6BUIXvk8slvNDJbhGFvIoXzkDhrJC2jUxNLz/GUjjvSzfw+g==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-darwin-x64@0.35.5':
+    resolution: {integrity: sha512-+BR255RhDlpygUpOc/Jdt1nT6DQ3XG/ERo5wbcdOf5Q320dKtPCKPLR1LJs9VGXRaMa8l1uUa0tkCNOXiAxZUw==}
+    engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [darwin]
 
-  '@img/sharp-libvips-darwin-arm64@1.1.0':
-    resolution: {integrity: sha512-HZ/JUmPwrJSoM4DIQPv/BfNh9yrOA8tlBbqbLz4JZ5uew2+o22Ik+tHQJcih7QJuSa0zo5coHTfD5J8inqj9DA==}
+  '@img/sharp-freebsd-wasm32@0.35.5':
+    resolution: {integrity: sha512-Y/z91nEZ4uIBX5X3nfTovjU9lHNKFYbL2lpHCLVNmXQK03VIZvXBBt0KxbPGp2SdGSF+2mQU4e+hQaWOt86iAw==}
+    engines: {node: '>=20.9.0'}
+    os: [freebsd]
+
+  '@img/sharp-libvips-darwin-arm64@1.3.4':
+    resolution: {integrity: sha512-5R89nBYiRdUlSWJxPhO+GVtaXzXSxKnRu/xqMn3KTA3L9EB9Oy/P+Nn2f2vlhPuUdy/Zusb2DarbyTpGCfEDuw==}
     cpu: [arm64]
     os: [darwin]
 
-  '@img/sharp-libvips-darwin-x64@1.1.0':
-    resolution: {integrity: sha512-Xzc2ToEmHN+hfvsl9wja0RlnXEgpKNmftriQp6XzY/RaSfwD9th+MSh0WQKzUreLKKINb3afirxW7A0fz2YWuQ==}
+  '@img/sharp-libvips-darwin-x64@1.3.4':
+    resolution: {integrity: sha512-iR2OKH80yi0U+dUplyh3/xdpFvps6YkCwsXenIJxqxR1v9o+xtKTGbS9H7cps+2Vxjc8B1j96p75NmTGjIhtpQ==}
     cpu: [x64]
     os: [darwin]
 
-  '@img/sharp-libvips-linux-arm64@1.1.0':
-    resolution: {integrity: sha512-IVfGJa7gjChDET1dK9SekxFFdflarnUB8PwW8aGwEoF3oAsSDuNUTYS+SKDOyOJxQyDC1aPFMuRYLoDInyV9Ew==}
+  '@img/sharp-libvips-linux-arm64@1.3.4':
+    resolution: {integrity: sha512-Y3dgX/6lE2QhQb+Gxy0WZxfg9MEm/JBjamZpS2IklP7xIQoKN4hzAm7KcMVGtaVDt3neE9OKBC7vAfonA/Lr1A==}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
-  '@img/sharp-libvips-linux-arm@1.1.0':
-    resolution: {integrity: sha512-s8BAd0lwUIvYCJyRdFqvsj+BJIpDBSxs6ivrOPm/R7piTs5UIwY5OjXrP2bqXC9/moGsyRa37eYWYCOGVXxVrA==}
+  '@img/sharp-libvips-linux-arm@1.3.4':
+    resolution: {integrity: sha512-LmRtTsOHuvM2+wlO2Db37dx5MiZhB0FvSunciw48YjdOkZz9KAiRbm8ujeMOA1INqmei5NapFxYEK1D1ZSidmw==}
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
-  '@img/sharp-libvips-linux-ppc64@1.1.0':
-    resolution: {integrity: sha512-tiXxFZFbhnkWE2LA8oQj7KYR+bWBkiV2nilRldT7bqoEZ4HiDOcePr9wVDAZPi/Id5fT1oY9iGnDq20cwUz8lQ==}
+  '@img/sharp-libvips-linux-ppc64@1.3.4':
+    resolution: {integrity: sha512-Le6boB8Tai0Nis+gIxIpKx68UDVVIqdR8Tin5Yf1z2LJJQLDJvCDRqRu+jC2qCoD+eIomonmOwB4smBRxfVpYQ==}
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
-  '@img/sharp-libvips-linux-s390x@1.1.0':
-    resolution: {integrity: sha512-xukSwvhguw7COyzvmjydRb3x/09+21HykyapcZchiCUkTThEQEOMtBj9UhkaBRLuBrgLFzQ2wbxdeCCJW/jgJA==}
+  '@img/sharp-libvips-linux-riscv64@1.3.4':
+    resolution: {integrity: sha512-aHkkIEHPRdQEegJN20MLmGtxYD9R2wQr3Cwpddnu5+YKMt6Uzax7S9h5gpZTo8wyrGuZSlfQ63OevL5mTyOC7Q==}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@img/sharp-libvips-linux-s390x@1.3.4':
+    resolution: {integrity: sha512-ra/mB6MikESDUO7Yg+Mi95bFBb9GsObURuhnOv3OqknjGe9sZrG8tCe9q0xSIGrtLgvgw0gKnFWcK4blSgQOuQ==}
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
-  '@img/sharp-libvips-linux-x64@1.1.0':
-    resolution: {integrity: sha512-yRj2+reB8iMg9W5sULM3S74jVS7zqSzHG3Ol/twnAAkAhnGQnpjj6e4ayUz7V+FpKypwgs82xbRdYtchTTUB+Q==}
+  '@img/sharp-libvips-linux-x64@1.3.4':
+    resolution: {integrity: sha512-GJ//SSXbnwSDes02umB3nDJLFcQzw8a18V8fyhqr6tV515tOEMdImjjxj1AoafMRz56F3PHgftnj1QEKSU1zkw==}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
-  '@img/sharp-libvips-linuxmusl-arm64@1.1.0':
-    resolution: {integrity: sha512-jYZdG+whg0MDK+q2COKbYidaqW/WTz0cc1E+tMAusiDygrM4ypmSCjOJPmFTvHHJ8j/6cAGyeDWZOsK06tP33w==}
+  '@img/sharp-libvips-linuxmusl-arm64@1.3.4':
+    resolution: {integrity: sha512-hvulFwtjUcagsis6BBxHwGFwWoNZjgYmULGVrZcyfNbjA8hKILbRxGg15/7w5HDyXHXUos/j6baAWqnCyQ2DWA==}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
-  '@img/sharp-libvips-linuxmusl-x64@1.1.0':
-    resolution: {integrity: sha512-wK7SBdwrAiycjXdkPnGCPLjYb9lD4l6Ze2gSdAGVZrEL05AOUJESWU2lhlC+Ffn5/G+VKuSm6zzbQSzFX/P65A==}
+  '@img/sharp-libvips-linuxmusl-x64@1.3.4':
+    resolution: {integrity: sha512-6zXKeE/p39I1AmA3cJG35eyBGNqNddLnUXjhwBnsGjFPWqf5VKkDBEqaEkPDoTEtkxwi2vv8Tcr2mDyP4So7Fg==}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
-  '@img/sharp-linux-arm64@0.34.2':
-    resolution: {integrity: sha512-D8n8wgWmPDakc83LORcfJepdOSN6MvWNzzz2ux0MnIbOqdieRZwVYY32zxVx+IFUT8er5KPcyU3XXsn+GzG/0Q==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-linux-arm64@0.35.5':
+    resolution: {integrity: sha512-LYVx5JTsOM2CBzmxreh+nl64/3H6Xb09iSLknqH47z2T2DFFxDeFLP5y4dJwe6H7uGQlHPyEEtIqyo3DYsRwdQ==}
+    engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
-  '@img/sharp-linux-arm@0.34.2':
-    resolution: {integrity: sha512-0DZzkvuEOqQUP9mo2kjjKNok5AmnOr1jB2XYjkaoNRwpAYMDzRmAqUIa1nRi58S2WswqSfPOWLNOr0FDT3H5RQ==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-linux-arm@0.35.5':
+    resolution: {integrity: sha512-LEaXK2WdXVK5ykcw0buWyPMsmLLL2vpHLD6yrNSW+JGEL3BZPA4tpKN6iaMc4AxTTAoaX/sU1rOL51lcIz48ZQ==}
+    engines: {node: '>=20.9.0'}
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
-  '@img/sharp-linux-s390x@0.34.2':
-    resolution: {integrity: sha512-EGZ1xwhBI7dNISwxjChqBGELCWMGDvmxZXKjQRuqMrakhO8QoMgqCrdjnAqJq/CScxfRn+Bb7suXBElKQpPDiw==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-linux-ppc64@0.35.5':
+    resolution: {integrity: sha512-QVxAAq8evVRI9ia2vqgwrmWucn5Dfv+JdWzj75pD8omHLPSP7f8p20O8jxzjCcuCEQEOtYOZUmX1hkiZ0kdevA==}
+    engines: {node: '>=20.9.0'}
+    cpu: [ppc64]
+    os: [linux]
+    libc: [glibc]
+
+  '@img/sharp-linux-riscv64@0.35.5':
+    resolution: {integrity: sha512-LtdreXguaavKODPIfzJ4kffx7UNt1omwtK0rch4EBbbSTXPnxWmYSayXdLJw0fJzQ97kHt1gL/yh4tvU+nCyRQ==}
+    engines: {node: '>=20.9.0'}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@img/sharp-linux-s390x@0.35.5':
+    resolution: {integrity: sha512-UZasTOFiYzotTsGOCu42BfUzP6Tu6Do/947iRm1RsLKvlllxwGcn4RN27LibGWceix4Y+Pmw3jsnTcCQIgWjqA==}
+    engines: {node: '>=20.9.0'}
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
-  '@img/sharp-linux-x64@0.34.2':
-    resolution: {integrity: sha512-sD7J+h5nFLMMmOXYH4DD9UtSNBD05tWSSdWAcEyzqW8Cn5UxXvsHAxmxSesYUsTOBmUnjtxghKDl15EvfqLFbQ==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-linux-x64@0.35.5':
+    resolution: {integrity: sha512-SxFtLTeJInhAA9Q836kux2vZNeOBQEx658qvbboZScr0wIARym3IcGmW7KpVD5sbVg0Ojy+udFQdayYIZyoNog==}
+    engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
-  '@img/sharp-linuxmusl-arm64@0.34.2':
-    resolution: {integrity: sha512-NEE2vQ6wcxYav1/A22OOxoSOGiKnNmDzCYFOZ949xFmrWZOVII1Bp3NqVVpvj+3UeHMFyN5eP/V5hzViQ5CZNA==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-linuxmusl-arm64@0.35.5':
+    resolution: {integrity: sha512-9HbMclmI1zlNkFRs3z9/eBtDjfD0sGlrX1z6b1qwmiFY5ElDLh4BC0LPBdVp7z1DXFiKlIcznf+ZlsuZzLxQqg==}
+    engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
-  '@img/sharp-linuxmusl-x64@0.34.2':
-    resolution: {integrity: sha512-DOYMrDm5E6/8bm/yQLCWyuDJwUnlevR8xtF8bs+gjZ7cyUNYXiSf/E8Kp0Ss5xasIaXSHzb888V1BE4i1hFhAA==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-linuxmusl-x64@0.35.5':
+    resolution: {integrity: sha512-4KOphqB035HrVdqLZfCgMzzERrQkkzOwRhl4OAkRO1YCldbaFjySXMaK534Mo0V+LndnlJk+sbUyLeU0ULyD1A==}
+    engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
-  '@img/sharp-wasm32@0.34.2':
-    resolution: {integrity: sha512-/VI4mdlJ9zkaq53MbIG6rZY+QRN3MLbR6usYlgITEzi4Rpx5S6LFKsycOQjkOGmqTNmkIdLjEvooFKwww6OpdQ==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-wasm32@0.35.5':
+    resolution: {integrity: sha512-Ptsga1su4tQx+LLF1ECS9U6nz5kmrXKo6XVbtR48Ke3ZRxxgaWBu7IDtEe1quo8hiupwm6WFqxVlXaSf7IINGQ==}
+    engines: {node: '>=20.9.0'}
+
+  '@img/sharp-webcontainers-wasm32@0.35.5':
+    resolution: {integrity: sha512-hfhF/FmoQyTUkA0bIKFOtw536BQSeBMe6BF6QyWlrPxT754+TFLaZ7sKKTfvvM0yJgKgaYTwnFCIZ/GuDw5SUA==}
+    engines: {node: '>=20.9.0'}
     cpu: [wasm32]
 
-  '@img/sharp-win32-arm64@0.34.2':
-    resolution: {integrity: sha512-cfP/r9FdS63VA5k0xiqaNaEoGxBg9k7uE+RQGzuK9fHt7jib4zAVVseR9LsE4gJcNWgT6APKMNnCcnyOtmSEUQ==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-win32-arm64@0.35.5':
+    resolution: {integrity: sha512-X4t7g+7ZA5DKblCBEXGjUqqemj4vczING/5viFwAL8h4N3qYeyjwdCvRLHi4EdOUI+2Z7UFlp1VM+p/AuEtm6Q==}
+    engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [win32]
 
-  '@img/sharp-win32-ia32@0.34.2':
-    resolution: {integrity: sha512-QLjGGvAbj0X/FXl8n1WbtQ6iVBpWU7JO94u/P2M4a8CFYsvQi4GW2mRy/JqkRx0qpBzaOdKJKw8uc930EX2AHw==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-win32-ia32@0.35.5':
+    resolution: {integrity: sha512-5Zm82LoBc43nhwNybZlG7Y1KO//Zhsn306fQl29ZOuStHLGTo3BWL83q3cznX0poxSAMuYL1On/BHBxkBeKr6A==}
+    engines: {node: ^20.9.0}
     cpu: [ia32]
     os: [win32]
 
-  '@img/sharp-win32-x64@0.34.2':
-    resolution: {integrity: sha512-aUdT6zEYtDKCaxkofmmJDJYGCf0+pJg3eU9/oBuqvEeoB9dKI6ZLc/1iLJCTuJQDO4ptntAlkUmHgGjyuobZbw==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  '@img/sharp-win32-x64@0.35.5':
+    resolution: {integrity: sha512-x76eH0vEiHlcMQu8Y8IenntaACtddpT6W0wmXtWrnKcnKI7ME5DdgqhAD6SEWOEl1v2zDvkZDhFA9KnURwpfqg==}
+    engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [win32]
 
@@ -477,56 +526,60 @@ packages:
   '@napi-rs/wasm-runtime@0.2.10':
     resolution: {integrity: sha512-bCsCyeZEwVErsGmyPNSzwfwFn4OdxBj0mmv6hOFucB/k81Ojdu68RbZdxYsRQUPc9l6SU5F/cG+bXgWs3oUgsQ==}
 
-  '@next/env@15.3.0':
-    resolution: {integrity: sha512-6mDmHX24nWlHOlbwUiAOmMyY7KELimmi+ed8qWcJYjqXeC+G6JzPZ3QosOAfjNwgMIzwhXBiRiCgdh8axTTdTA==}
+  '@next/env@15.5.28':
+    resolution: {integrity: sha512-xxW5EBI8fMPuVTPBW7LL980IRbuDXlbkUAwp9DDhtb4Lnich3nJ13uYpvrX4VE74hWPf6AvHHAMmGCidcHjbfg==}
 
   '@next/eslint-plugin-next@15.3.0':
     resolution: {integrity: sha512-511UUcpWw5GWTyKfzW58U2F/bYJyjLE9e3SlnGK/zSXq7RqLlqFO8B9bitJjumLpj317fycC96KZ2RZsjGNfBw==}
 
-  '@next/swc-darwin-arm64@15.3.0':
-    resolution: {integrity: sha512-PDQcByT0ZfF2q7QR9d+PNj3wlNN4K6Q8JoHMwFyk252gWo4gKt7BF8Y2+KBgDjTFBETXZ/TkBEUY7NIIY7A/Kw==}
+  '@next/swc-darwin-arm64@15.5.28':
+    resolution: {integrity: sha512-dPoQYXcfSIqx5o+TOXVXO7kONK5qbtNRDeiTfII0bT3puGIT6VF5e0QwmxNZfEZ5Zety5f3m9P/p4xqwfiLlPg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@next/swc-darwin-x64@15.3.0':
-    resolution: {integrity: sha512-m+eO21yg80En8HJ5c49AOQpFDq+nP51nu88ZOMCorvw3g//8g1JSUsEiPSiFpJo1KCTQ+jm9H0hwXK49H/RmXg==}
+  '@next/swc-darwin-x64@15.5.28':
+    resolution: {integrity: sha512-RgCJ7buBivTH+6sddqaVm+/v8kwMHlFkobvdt3DfETutws5HrxnToMIWSN9X3MZ3aAi7BbKrGZZWUDQLEycXqw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
 
-  '@next/swc-linux-arm64-gnu@15.3.0':
-    resolution: {integrity: sha512-H0Kk04ZNzb6Aq/G6e0un4B3HekPnyy6D+eUBYPJv9Abx8KDYgNMWzKt4Qhj57HXV3sTTjsfc1Trc1SxuhQB+Tg==}
+  '@next/swc-linux-arm64-gnu@15.5.28':
+    resolution: {integrity: sha512-OHXQe13olE59aKe++zHavGcJPh5SLHXi6Anret3BBeq1+qhSuOJDNAli/EDDfxs6UTqA4Qddo4uyYry2slyjiQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
-  '@next/swc-linux-arm64-musl@15.3.0':
-    resolution: {integrity: sha512-k8GVkdMrh/+J9uIv/GpnHakzgDQhrprJ/FbGQvwWmstaeFG06nnAoZCJV+wO/bb603iKV1BXt4gHG+s2buJqZA==}
+  '@next/swc-linux-arm64-musl@15.5.28':
+    resolution: {integrity: sha512-nTB7bB6vfn4ezCJNYP43ukt2o8L3+WxKF/sTcTxepdXsJh3SM9RhlU7wrZYbH7L4HO5M87dqDTwm8587vAkCiw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
-  '@next/swc-linux-x64-gnu@15.3.0':
-    resolution: {integrity: sha512-ZMQ9yzDEts/vkpFLRAqfYO1wSpIJGlQNK9gZ09PgyjBJUmg8F/bb8fw2EXKgEaHbCc4gmqMpDfh+T07qUphp9A==}
+  '@next/swc-linux-x64-gnu@15.5.28':
+    resolution: {integrity: sha512-WXCfVI32rW3xCusoUX1RpZKtyChWU2Zwe27JUDmM3KrXwcDNc9vV4zEq0GKFAURnuQ/Ouo/XqPvB0yh445XZCg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
-  '@next/swc-linux-x64-musl@15.3.0':
-    resolution: {integrity: sha512-RFwq5VKYTw9TMr4T3e5HRP6T4RiAzfDJ6XsxH8j/ZeYq2aLsBqCkFzwMI0FmnSsLaUbOb46Uov0VvN3UciHX5A==}
+  '@next/swc-linux-x64-musl@15.5.28':
+    resolution: {integrity: sha512-Miq+NDb/HWsXuxseYxMM6fuEOQXgTziarkKIRpVKCn8W69cEfhQaQr+90pO+u4q2CbJR2wzXmUuCFyZaJs/Nng==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
-  '@next/swc-win32-arm64-msvc@15.3.0':
-    resolution: {integrity: sha512-a7kUbqa/k09xPjfCl0RSVAvEjAkYBYxUzSVAzk2ptXiNEL+4bDBo9wNC43G/osLA/EOGzG4CuNRFnQyIHfkRgQ==}
+  '@next/swc-win32-arm64-msvc@15.5.28':
+    resolution: {integrity: sha512-5LR79lemgDlgxvG7MQJ+zHCkVcrUoQuO7CiIvq3I58vNW4goSOE2b+19Z6FujRWMouvni4gvudYFuFuNxolGWA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
 
-  '@next/swc-win32-x64-msvc@15.3.0':
-    resolution: {integrity: sha512-vHUQS4YVGJPmpjn7r5lEZuMhK5UQBNBRSB+iGDvJjaNk649pTIcRluDWNb9siunyLLiu/LDPHfvxBtNamyuLTw==}
+  '@next/swc-win32-x64-msvc@15.5.28':
+    resolution: {integrity: sha512-GNipvXUYROSTf4PXEyH95FrWImIB5zdaK6uEOg0RP1/X2drnvoMwiBkJ0VWdzX7w3iiBm3y5g2TxkKDGVTOQcg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -789,9 +842,6 @@ packages:
 
   '@solana/web3.js@1.98.2':
     resolution: {integrity: sha512-BqVwEG+TaG2yCkBMbD3C4hdpustR4FpuUFRPUmqRZYYlPI9Hg4XMWxHWOWRzHE9Lkc9NDjzXFX7lDXSgzC7R1A==}
-
-  '@swc/counter@0.1.3':
-    resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
 
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
@@ -1246,6 +1296,7 @@ packages:
 
   '@walletconnect/ethereum-provider@2.20.2':
     resolution: {integrity: sha512-fGNJtytHuBWZcmMXRIG1djlfEiPMvPJ0R3JlfJjAx2VfVN+O+1xdF6QSWcZxFizviIUFJV+f1zWt0V2VVD61Rg==}
+    deprecated: 'Reliability and performance improvements. See: https://github.com/WalletConnect/walletconnect-monorepo/releases'
 
   '@walletconnect/events@1.0.1':
     resolution: {integrity: sha512-NPTqaoi0oPBVNuLv7qPaJazmGHs5JGyO8eEAk5VGKmJzDR7AHzD4k6ilox5kxk1iwiOnFopBOOMLs86Oa76HpQ==}
@@ -1583,10 +1634,6 @@ packages:
     resolution: {integrity: sha512-WDtdLmJvAuNNPzByAYpRo2rF1Mmradw6gvWsQKf63476DDXmomT9zUiGypLcG4ibIM67vhAj8jJRdbmEws2Aqw==}
     engines: {node: '>=6.14.2'}
 
-  busboy@1.6.0:
-    resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
-    engines: {node: '>=10.16.0'}
-
   call-bind-apply-helpers@1.0.2:
     resolution: {integrity: sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ==}
     engines: {node: '>= 0.4'}
@@ -1665,16 +1712,9 @@ packages:
     resolution: {integrity: sha512-SbtvAMWvASO5TE2QP07jHBMXKafgdZz8Vrsrn96fiL+O92/FN/PLARzUW5sKt013fjAprK2d2iCn2hk2Xb5oow==}
     engines: {node: '>=12.20'}
 
-  color-string@1.9.1:
-    resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
-
   color-string@2.0.1:
     resolution: {integrity: sha512-5z9FbYTZPAo8iKsNEqRNv+OlpBbDcoE+SY9GjLfDUHEfcNNV7tS9eSAlFHEaub/r5tBL9LtskAeq1l9SaoZ5tQ==}
     engines: {node: '>=18'}
-
-  color@4.2.3:
-    resolution: {integrity: sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A==}
-    engines: {node: '>=12.5.0'}
 
   color@5.0.0:
     resolution: {integrity: sha512-16BlyiuyLq3MLxpRWyOTiWsO3ii/eLQLJUQXBSNcxMBBSnyt1ee9YUdaozQp03ifwm5woztEZGDbk9RGVuCsdw==}
@@ -1820,6 +1860,10 @@ packages:
 
   detect-libc@2.0.4:
     resolution: {integrity: sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==}
+    engines: {node: '>=8'}
+
+  detect-libc@2.1.2:
+    resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
   dijkstrajs@1.0.3:
@@ -2007,6 +2051,7 @@ packages:
   eslint@9.27.0:
     resolution: {integrity: sha512-ixRawFQuMB9DZ7fjU3iGGganFDp3+45bPOdaRurcFHSXO1e/sYwUX/FtQZpLZJR6SjMoJH8hR2pPEAfDyCoU2Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2308,9 +2353,6 @@ packages:
   is-array-buffer@3.0.5:
     resolution: {integrity: sha512-DDfANUiiG2wC1qawP66qlTugJeL5HyzMpfr8lLK+jMQirGzNod0B12cFB/9q838Ru27sBwfw78/rdoU7RERz6A==}
     engines: {node: '>= 0.4'}
-
-  is-arrayish@0.3.2:
-    resolution: {integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==}
 
   is-async-function@2.1.1:
     resolution: {integrity: sha512-9dgM/cZBnNvjzaMYHVoxxfPj2QXt22Ev7SuuPrs+xav0ukGB0S6d4ydZdEiM48kLx5kDV+QBPrpVnFyefL8kkQ==}
@@ -2722,13 +2764,13 @@ packages:
   new-date@1.0.3:
     resolution: {integrity: sha512-0fsVvQPbo2I18DT2zVHpezmeeNYV2JaJSrseiHLc17GNOxJzUdx5mvSigPu8LtIfZSij5i1wXnXFspEs2CD6hA==}
 
-  next@15.3.0:
-    resolution: {integrity: sha512-k0MgP6BsK8cZ73wRjMazl2y2UcXj49ZXLDEgx6BikWuby/CN+nh81qFFI16edgd7xYpe/jj2OZEIwCoqnzz0bQ==}
+  next@15.5.28:
+    resolution: {integrity: sha512-JjhLBBY1PNnuwPtcZ7t8yxVeJVYvD2Jyp633J+gRCNbzSt7N0E+xqCf6uQiff3+3qmUkwcF/ksfSsK1xsZ76Tw==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
-      '@playwright/test': ^1.41.2
+      '@playwright/test': ^1.51.1
       babel-plugin-react-compiler: '*'
       react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
       react-dom: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
@@ -3152,6 +3194,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.8.5:
+    resolution: {integrity: sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
 
@@ -3171,9 +3218,14 @@ packages:
     resolution: {integrity: sha512-QMEp5B7cftE7APOjk5Y6xgrbWu+WkLVQwk8JNjZ8nKRciZaByEW6MubieAiToS7+dwvrjGhH8jRXz3MVd0AYqQ==}
     hasBin: true
 
-  sharp@0.34.2:
-    resolution: {integrity: sha512-lszvBmB9QURERtyKT2bNmsgxXK0ShJrL/fvqlonCo7e6xBF8nT8xU6pW+PMIbLsz0RxQk3rgH9kd8UmvOzlMJg==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  sharp@0.35.5:
+    resolution: {integrity: sha512-Ywn4OnzGukp7CDMrp08RQ50YKmuwG47brZgIVPTvBaaAfQlRlygrRqSrxdCiL9M+LlzLBiJ68IR1QqvzHyjC7g==}
+    engines: {node: '>=20.9.0'}
+    peerDependencies:
+      '@types/node': '*'
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
 
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -3198,9 +3250,6 @@ packages:
   side-channel@1.1.0:
     resolution: {integrity: sha512-ZX99e6tRweoUXqR+VBrslhda51Nh5MTQwou5tnUDgbtyM0dBgmhEDtWGP/xbKn6hqfPRHujUNwz5fy/wbbhnpw==}
     engines: {node: '>= 0.4'}
-
-  simple-swizzle@0.2.2:
-    resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
 
   socket.io-client@4.8.1:
     resolution: {integrity: sha512-hJVXfu3E28NmzGk8o1sHhN3om52tRvwYeidbj7xKy2eIIse5IoKX3USlS6Tqt3BHAtflLIkCQBkzVrEEfWUyYQ==}
@@ -3236,10 +3285,6 @@ packages:
 
   stream-shift@1.0.3:
     resolution: {integrity: sha512-76ORR0DO1o1hlKwTbi/DM3EXWGf3ZJYO8cXX5RJwnul2DEg2oyoZyjLNoQM8WsvZiFKCRfC1O0J7iCvie3RZmQ==}
-
-  streamsearch@1.1.0:
-    resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
-    engines: {node: '>=10.0.0'}
 
   strict-uri-encode@2.0.0:
     resolution: {integrity: sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==}
@@ -3759,12 +3804,12 @@ snapshots:
 
   '@chaitanyapotti/register-service-worker@1.7.4': {}
 
-  '@coinbase/wallet-sdk@3.9.3':
+  '@coinbase/wallet-sdk@3.9.3(supports-color@7.2.0)':
     dependencies:
       bn.js: 5.2.2
       buffer: 6.0.3
       clsx: 1.2.1
-      eth-block-tracker: 7.1.0
+      eth-block-tracker: 7.1.0(supports-color@7.2.0)
       eth-json-rpc-filters: 6.0.1
       eventemitter3: 5.0.1
       keccak: 3.0.4
@@ -3790,6 +3835,11 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
+  '@emnapi/runtime@1.11.3':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
+
   '@emnapi/runtime@1.4.3':
     dependencies:
       tslib: 2.8.1
@@ -3800,17 +3850,17 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@eslint-community/eslint-utils@4.7.0(eslint@9.27.0(jiti@2.4.2))':
+  '@eslint-community/eslint-utils@4.7.0(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))':
     dependencies:
-      eslint: 9.27.0(jiti@2.4.2)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.1': {}
 
-  '@eslint/config-array@0.20.0':
+  '@eslint/config-array@0.20.0(supports-color@7.2.0)':
     dependencies:
       '@eslint/object-schema': 2.1.6
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -3821,10 +3871,10 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/eslintrc@3.3.1':
+  '@eslint/eslintrc@3.3.1(supports-color@7.2.0)':
     dependencies:
       ajv: 6.12.6
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       espree: 10.3.0
       globals: 14.0.0
       ignore: 5.3.2
@@ -3893,85 +3943,111 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@img/sharp-darwin-arm64@0.34.2':
+  '@img/colour@1.1.0':
+    optional: true
+
+  '@img/sharp-darwin-arm64@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-darwin-arm64': 1.1.0
+      '@img/sharp-libvips-darwin-arm64': 1.3.4
     optional: true
 
-  '@img/sharp-darwin-x64@0.34.2':
+  '@img/sharp-darwin-x64@0.35.5':
     optionalDependencies:
-      '@img/sharp-libvips-darwin-x64': 1.1.0
+      '@img/sharp-libvips-darwin-x64': 1.3.4
     optional: true
 
-  '@img/sharp-libvips-darwin-arm64@1.1.0':
-    optional: true
-
-  '@img/sharp-libvips-darwin-x64@1.1.0':
-    optional: true
-
-  '@img/sharp-libvips-linux-arm64@1.1.0':
-    optional: true
-
-  '@img/sharp-libvips-linux-arm@1.1.0':
-    optional: true
-
-  '@img/sharp-libvips-linux-ppc64@1.1.0':
-    optional: true
-
-  '@img/sharp-libvips-linux-s390x@1.1.0':
-    optional: true
-
-  '@img/sharp-libvips-linux-x64@1.1.0':
-    optional: true
-
-  '@img/sharp-libvips-linuxmusl-arm64@1.1.0':
-    optional: true
-
-  '@img/sharp-libvips-linuxmusl-x64@1.1.0':
-    optional: true
-
-  '@img/sharp-linux-arm64@0.34.2':
-    optionalDependencies:
-      '@img/sharp-libvips-linux-arm64': 1.1.0
-    optional: true
-
-  '@img/sharp-linux-arm@0.34.2':
-    optionalDependencies:
-      '@img/sharp-libvips-linux-arm': 1.1.0
-    optional: true
-
-  '@img/sharp-linux-s390x@0.34.2':
-    optionalDependencies:
-      '@img/sharp-libvips-linux-s390x': 1.1.0
-    optional: true
-
-  '@img/sharp-linux-x64@0.34.2':
-    optionalDependencies:
-      '@img/sharp-libvips-linux-x64': 1.1.0
-    optional: true
-
-  '@img/sharp-linuxmusl-arm64@0.34.2':
-    optionalDependencies:
-      '@img/sharp-libvips-linuxmusl-arm64': 1.1.0
-    optional: true
-
-  '@img/sharp-linuxmusl-x64@0.34.2':
-    optionalDependencies:
-      '@img/sharp-libvips-linuxmusl-x64': 1.1.0
-    optional: true
-
-  '@img/sharp-wasm32@0.34.2':
+  '@img/sharp-freebsd-wasm32@0.35.5':
     dependencies:
-      '@emnapi/runtime': 1.4.3
+      '@img/sharp-wasm32': 0.35.5
     optional: true
 
-  '@img/sharp-win32-arm64@0.34.2':
+  '@img/sharp-libvips-darwin-arm64@1.3.4':
     optional: true
 
-  '@img/sharp-win32-ia32@0.34.2':
+  '@img/sharp-libvips-darwin-x64@1.3.4':
     optional: true
 
-  '@img/sharp-win32-x64@0.34.2':
+  '@img/sharp-libvips-linux-arm64@1.3.4':
+    optional: true
+
+  '@img/sharp-libvips-linux-arm@1.3.4':
+    optional: true
+
+  '@img/sharp-libvips-linux-ppc64@1.3.4':
+    optional: true
+
+  '@img/sharp-libvips-linux-riscv64@1.3.4':
+    optional: true
+
+  '@img/sharp-libvips-linux-s390x@1.3.4':
+    optional: true
+
+  '@img/sharp-libvips-linux-x64@1.3.4':
+    optional: true
+
+  '@img/sharp-libvips-linuxmusl-arm64@1.3.4':
+    optional: true
+
+  '@img/sharp-libvips-linuxmusl-x64@1.3.4':
+    optional: true
+
+  '@img/sharp-linux-arm64@0.35.5':
+    optionalDependencies:
+      '@img/sharp-libvips-linux-arm64': 1.3.4
+    optional: true
+
+  '@img/sharp-linux-arm@0.35.5':
+    optionalDependencies:
+      '@img/sharp-libvips-linux-arm': 1.3.4
+    optional: true
+
+  '@img/sharp-linux-ppc64@0.35.5':
+    optionalDependencies:
+      '@img/sharp-libvips-linux-ppc64': 1.3.4
+    optional: true
+
+  '@img/sharp-linux-riscv64@0.35.5':
+    optionalDependencies:
+      '@img/sharp-libvips-linux-riscv64': 1.3.4
+    optional: true
+
+  '@img/sharp-linux-s390x@0.35.5':
+    optionalDependencies:
+      '@img/sharp-libvips-linux-s390x': 1.3.4
+    optional: true
+
+  '@img/sharp-linux-x64@0.35.5':
+    optionalDependencies:
+      '@img/sharp-libvips-linux-x64': 1.3.4
+    optional: true
+
+  '@img/sharp-linuxmusl-arm64@0.35.5':
+    optionalDependencies:
+      '@img/sharp-libvips-linuxmusl-arm64': 1.3.4
+    optional: true
+
+  '@img/sharp-linuxmusl-x64@0.35.5':
+    optionalDependencies:
+      '@img/sharp-libvips-linuxmusl-x64': 1.3.4
+    optional: true
+
+  '@img/sharp-wasm32@0.35.5':
+    dependencies:
+      '@emnapi/runtime': 1.11.3
+    optional: true
+
+  '@img/sharp-webcontainers-wasm32@0.35.5':
+    dependencies:
+      '@img/sharp-wasm32': 0.35.5
+    optional: true
+
+  '@img/sharp-win32-arm64@0.35.5':
+    optional: true
+
+  '@img/sharp-win32-ia32@0.35.5':
+    optional: true
+
+  '@img/sharp-win32-x64@0.35.5':
     optional: true
 
   '@isaacs/fs-minipass@4.0.1':
@@ -4024,35 +4100,35 @@ snapshots:
       buffer: 6.0.3
       viem: 2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
 
-  '@metamask/eth-json-rpc-provider@1.0.1':
+  '@metamask/eth-json-rpc-provider@1.0.1(supports-color@7.2.0)':
     dependencies:
-      '@metamask/json-rpc-engine': 7.3.3
+      '@metamask/json-rpc-engine': 7.3.3(supports-color@7.2.0)
       '@metamask/safe-event-emitter': 3.1.2
-      '@metamask/utils': 5.0.2
+      '@metamask/utils': 5.0.2(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@metamask/json-rpc-engine@7.3.3':
+  '@metamask/json-rpc-engine@7.3.3(supports-color@7.2.0)':
     dependencies:
-      '@metamask/rpc-errors': 6.4.0
+      '@metamask/rpc-errors': 6.4.0(supports-color@7.2.0)
       '@metamask/safe-event-emitter': 3.1.2
-      '@metamask/utils': 8.5.0
+      '@metamask/utils': 8.5.0(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@metamask/json-rpc-engine@8.0.2':
+  '@metamask/json-rpc-engine@8.0.2(supports-color@7.2.0)':
     dependencies:
-      '@metamask/rpc-errors': 6.4.0
+      '@metamask/rpc-errors': 6.4.0(supports-color@7.2.0)
       '@metamask/safe-event-emitter': 3.1.2
-      '@metamask/utils': 8.5.0
+      '@metamask/utils': 8.5.0(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@metamask/json-rpc-middleware-stream@7.0.2':
+  '@metamask/json-rpc-middleware-stream@7.0.2(supports-color@7.2.0)':
     dependencies:
-      '@metamask/json-rpc-engine': 8.0.2
+      '@metamask/json-rpc-engine': 8.0.2(supports-color@7.2.0)
       '@metamask/safe-event-emitter': 3.1.2
-      '@metamask/utils': 8.5.0
+      '@metamask/utils': 8.5.0(supports-color@7.2.0)
       readable-stream: 3.6.2
     transitivePeerDependencies:
       - supports-color
@@ -4066,14 +4142,14 @@ snapshots:
     dependencies:
       bowser: 2.11.0
 
-  '@metamask/providers@16.1.0':
+  '@metamask/providers@16.1.0(supports-color@7.2.0)':
     dependencies:
-      '@metamask/json-rpc-engine': 8.0.2
-      '@metamask/json-rpc-middleware-stream': 7.0.2
+      '@metamask/json-rpc-engine': 8.0.2(supports-color@7.2.0)
+      '@metamask/json-rpc-middleware-stream': 7.0.2(supports-color@7.2.0)
       '@metamask/object-multiplex': 2.1.0
-      '@metamask/rpc-errors': 6.4.0
+      '@metamask/rpc-errors': 6.4.0(supports-color@7.2.0)
       '@metamask/safe-event-emitter': 3.1.2
-      '@metamask/utils': 8.5.0
+      '@metamask/utils': 8.5.0(supports-color@7.2.0)
       detect-browser: 5.3.0
       extension-port-stream: 3.0.0
       fast-deep-equal: 3.1.3
@@ -4083,9 +4159,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@metamask/rpc-errors@6.4.0':
+  '@metamask/rpc-errors@6.4.0(supports-color@7.2.0)':
     dependencies:
-      '@metamask/utils': 9.3.0
+      '@metamask/utils': 9.3.0(supports-color@7.2.0)
       fast-safe-stringify: 2.1.1
     transitivePeerDependencies:
       - supports-color
@@ -4098,32 +4174,32 @@ snapshots:
     dependencies:
       openapi-fetch: 0.13.8
 
-  '@metamask/sdk-communication-layer@0.32.0(cross-fetch@4.1.0)(eciesjs@0.4.15)(eventemitter2@6.4.9)(readable-stream@3.6.2)(socket.io-client@4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@metamask/sdk-communication-layer@0.32.0(cross-fetch@4.1.0)(eciesjs@0.4.15)(eventemitter2@6.4.9)(readable-stream@3.6.2)(socket.io-client@4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10))(supports-color@7.2.0)':
     dependencies:
       bufferutil: 4.0.9
       cross-fetch: 4.1.0
       date-fns: 2.30.0
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       eciesjs: 0.4.15
       eventemitter2: 6.4.9
       readable-stream: 3.6.2
-      socket.io-client: 4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      socket.io-client: 4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       utf-8-validate: 5.0.10
       uuid: 8.3.2
     transitivePeerDependencies:
       - supports-color
 
-  '@metamask/sdk-communication-layer@0.33.0(cross-fetch@4.1.0)(eciesjs@0.4.15)(eventemitter2@6.4.9)(readable-stream@3.6.2)(socket.io-client@4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
+  '@metamask/sdk-communication-layer@0.33.0(cross-fetch@4.1.0)(eciesjs@0.4.15)(eventemitter2@6.4.9)(readable-stream@3.6.2)(socket.io-client@4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10))(supports-color@7.2.0)':
     dependencies:
       '@metamask/sdk-analytics': 0.0.5
       bufferutil: 4.0.9
       cross-fetch: 4.1.0
       date-fns: 2.30.0
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       eciesjs: 0.4.15
       eventemitter2: 6.4.9
       readable-stream: 3.6.2
-      socket.io-client: 4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      socket.io-client: 4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       utf-8-validate: 5.0.10
       uuid: 8.3.2
     transitivePeerDependencies:
@@ -4137,24 +4213,24 @@ snapshots:
     dependencies:
       '@paulmillr/qr': 0.2.1
 
-  '@metamask/sdk@0.32.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@metamask/sdk@0.32.0(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@metamask/onboarding': 1.0.1
-      '@metamask/providers': 16.1.0
-      '@metamask/sdk-communication-layer': 0.32.0(cross-fetch@4.1.0)(eciesjs@0.4.15)(eventemitter2@6.4.9)(readable-stream@3.6.2)(socket.io-client@4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@metamask/providers': 16.1.0(supports-color@7.2.0)
+      '@metamask/sdk-communication-layer': 0.32.0(cross-fetch@4.1.0)(eciesjs@0.4.15)(eventemitter2@6.4.9)(readable-stream@3.6.2)(socket.io-client@4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10))(supports-color@7.2.0)
       '@metamask/sdk-install-modal-web': 0.32.0
       '@paulmillr/qr': 0.2.1
       bowser: 2.11.0
       cross-fetch: 4.1.0
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       eciesjs: 0.4.15
       eth-rpc-errors: 4.0.3
       eventemitter2: 6.4.9
       obj-multiplex: 1.0.0
       pump: 3.0.2
       readable-stream: 3.6.2
-      socket.io-client: 4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      socket.io-client: 4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       tslib: 2.8.1
       util: 0.12.5
       uuid: 8.3.2
@@ -4164,25 +4240,25 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@metamask/sdk@0.33.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@metamask/sdk@0.33.0(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@metamask/onboarding': 1.0.1
-      '@metamask/providers': 16.1.0
+      '@metamask/providers': 16.1.0(supports-color@7.2.0)
       '@metamask/sdk-analytics': 0.0.5
-      '@metamask/sdk-communication-layer': 0.33.0(cross-fetch@4.1.0)(eciesjs@0.4.15)(eventemitter2@6.4.9)(readable-stream@3.6.2)(socket.io-client@4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@metamask/sdk-communication-layer': 0.33.0(cross-fetch@4.1.0)(eciesjs@0.4.15)(eventemitter2@6.4.9)(readable-stream@3.6.2)(socket.io-client@4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10))(supports-color@7.2.0)
       '@metamask/sdk-install-modal-web': 0.32.1
       '@paulmillr/qr': 0.2.1
       bowser: 2.11.0
       cross-fetch: 4.1.0
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       eciesjs: 0.4.15
       eth-rpc-errors: 4.0.3
       eventemitter2: 6.4.9
       obj-multiplex: 1.0.0
       pump: 3.0.2
       readable-stream: 3.6.2
-      socket.io-client: 4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      socket.io-client: 4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       tslib: 2.8.1
       util: 0.12.5
       uuid: 8.3.2
@@ -4194,38 +4270,38 @@ snapshots:
 
   '@metamask/superstruct@3.2.1': {}
 
-  '@metamask/utils@5.0.2':
+  '@metamask/utils@5.0.2(supports-color@7.2.0)':
     dependencies:
       '@ethereumjs/tx': 4.2.0
       '@types/debug': 4.1.12
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       semver: 7.7.2
       superstruct: 1.0.4
     transitivePeerDependencies:
       - supports-color
 
-  '@metamask/utils@8.5.0':
+  '@metamask/utils@8.5.0(supports-color@7.2.0)':
     dependencies:
       '@ethereumjs/tx': 4.2.0
       '@metamask/superstruct': 3.2.1
       '@noble/hashes': 1.8.0
       '@scure/base': 1.2.5
       '@types/debug': 4.1.12
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       pony-cause: 2.1.11
       semver: 7.7.2
       uuid: 9.0.1
     transitivePeerDependencies:
       - supports-color
 
-  '@metamask/utils@9.3.0':
+  '@metamask/utils@9.3.0(supports-color@7.2.0)':
     dependencies:
       '@ethereumjs/tx': 4.2.0
       '@metamask/superstruct': 3.2.1
       '@noble/hashes': 1.8.0
       '@scure/base': 1.2.5
       '@types/debug': 4.1.12
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       pony-cause: 2.1.11
       semver: 7.7.2
       uuid: 9.0.1
@@ -4239,34 +4315,34 @@ snapshots:
       '@tybys/wasm-util': 0.9.0
     optional: true
 
-  '@next/env@15.3.0': {}
+  '@next/env@15.5.28': {}
 
   '@next/eslint-plugin-next@15.3.0':
     dependencies:
       fast-glob: 3.3.1
 
-  '@next/swc-darwin-arm64@15.3.0':
+  '@next/swc-darwin-arm64@15.5.28':
     optional: true
 
-  '@next/swc-darwin-x64@15.3.0':
+  '@next/swc-darwin-x64@15.5.28':
     optional: true
 
-  '@next/swc-linux-arm64-gnu@15.3.0':
+  '@next/swc-linux-arm64-gnu@15.5.28':
     optional: true
 
-  '@next/swc-linux-arm64-musl@15.3.0':
+  '@next/swc-linux-arm64-musl@15.5.28':
     optional: true
 
-  '@next/swc-linux-x64-gnu@15.3.0':
+  '@next/swc-linux-x64-gnu@15.5.28':
     optional: true
 
-  '@next/swc-linux-x64-musl@15.3.0':
+  '@next/swc-linux-x64-musl@15.5.28':
     optional: true
 
-  '@next/swc-win32-arm64-msvc@15.3.0':
+  '@next/swc-win32-arm64-msvc@15.5.28':
     optional: true
 
-  '@next/swc-win32-x64-msvc@15.3.0':
+  '@next/swc-win32-x64-msvc@15.5.28':
     optional: true
 
   '@noble/ciphers@1.2.1': {}
@@ -4738,8 +4814,6 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@swc/counter@0.1.3': {}
-
   '@swc/helpers@0.5.15':
     dependencies:
       tslib: 2.8.1
@@ -4827,13 +4901,13 @@ snapshots:
       '@tanstack/query-core': 5.76.2
       react: 19.1.0
 
-  '@toruslabs/base-controllers@8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@toruslabs/base-controllers@8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@ethereumjs/util': 9.1.0
-      '@toruslabs/broadcast-channel': 12.0.0(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/broadcast-channel': 12.0.0(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)
-      '@web3auth/auth': 10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@web3auth/auth': 10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       async-mutex: 0.5.0
       bignumber.js: 9.3.0
       bowser: 2.11.0
@@ -4846,7 +4920,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@toruslabs/broadcast-channel@12.0.0(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@toruslabs/broadcast-channel@12.0.0(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@toruslabs/constants': 14.2.0(@babel/runtime@7.27.1)
@@ -4855,7 +4929,7 @@ snapshots:
       base64url: 3.0.1
       loglevel: 1.9.2
       oblivious-set: 1.4.0
-      socket.io-client: 4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      socket.io-client: 4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       unload: 2.4.1
     transitivePeerDependencies:
       - '@sentry/core'
@@ -4875,11 +4949,11 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.27.1
 
-  '@toruslabs/customauth@21.3.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@toruslabs/customauth@21.3.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@chaitanyapotti/register-service-worker': 1.7.4
-      '@toruslabs/broadcast-channel': 12.0.0(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/broadcast-channel': 12.0.0(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.1)
       '@toruslabs/eccrypto': 6.1.0
       '@toruslabs/fetch-node-details': 15.0.0(@babel/runtime@7.27.1)(@sentry/core@9.22.0)
@@ -4903,14 +4977,14 @@ snapshots:
     dependencies:
       elliptic: 6.6.1
 
-  '@toruslabs/ethereum-controllers@8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))':
+  '@toruslabs/ethereum-controllers@8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(supports-color@7.2.0)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))':
     dependencies:
       '@babel/runtime': 7.27.1
       '@ethereumjs/util': 9.1.0
       '@metamask/delegation-toolkit': 0.11.0(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))
-      '@toruslabs/base-controllers': 8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/base-controllers': 8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)
-      '@web3auth/auth': 10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@web3auth/auth': 10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       async-mutex: 0.5.0
       bignumber.js: 9.3.0
       bn.js: 5.2.2
@@ -4971,7 +5045,7 @@ snapshots:
     transitivePeerDependencies:
       - '@sentry/core'
 
-  '@toruslabs/secure-pub-sub@3.0.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@toruslabs/secure-pub-sub@3.0.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@toruslabs/constants': 14.2.0(@babel/runtime@7.27.1)
@@ -4979,7 +5053,7 @@ snapshots:
       '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)
       '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)
       loglevel: 1.9.2
-      socket.io-client: 4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      socket.io-client: 4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - '@sentry/core'
       - bufferutil
@@ -5083,15 +5157,15 @@ snapshots:
     dependencies:
       '@types/node': 20.17.50
 
-  '@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
+  '@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
-      '@typescript-eslint/parser': 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
+      '@typescript-eslint/parser': 8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)
       '@typescript-eslint/scope-manager': 8.32.1
-      '@typescript-eslint/type-utils': 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
-      '@typescript-eslint/utils': 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
+      '@typescript-eslint/type-utils': 8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)
+      '@typescript-eslint/utils': 8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)
       '@typescript-eslint/visitor-keys': 8.32.1
-      eslint: 9.27.0(jiti@2.4.2)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
       graphemer: 1.4.0
       ignore: 7.0.4
       natural-compare: 1.4.0
@@ -5100,14 +5174,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
+  '@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)':
     dependencies:
       '@typescript-eslint/scope-manager': 8.32.1
       '@typescript-eslint/types': 8.32.1
-      '@typescript-eslint/typescript-estree': 8.32.1(typescript@5.8.3)
+      '@typescript-eslint/typescript-estree': 8.32.1(supports-color@7.2.0)(typescript@5.8.3)
       '@typescript-eslint/visitor-keys': 8.32.1
-      debug: 4.4.1
-      eslint: 9.27.0(jiti@2.4.2)
+      debug: 4.4.1(supports-color@7.2.0)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
       typescript: 5.8.3
     transitivePeerDependencies:
       - supports-color
@@ -5117,12 +5191,12 @@ snapshots:
       '@typescript-eslint/types': 8.32.1
       '@typescript-eslint/visitor-keys': 8.32.1
 
-  '@typescript-eslint/type-utils@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
+  '@typescript-eslint/type-utils@8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)':
     dependencies:
-      '@typescript-eslint/typescript-estree': 8.32.1(typescript@5.8.3)
-      '@typescript-eslint/utils': 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
-      debug: 4.4.1
-      eslint: 9.27.0(jiti@2.4.2)
+      '@typescript-eslint/typescript-estree': 8.32.1(supports-color@7.2.0)(typescript@5.8.3)
+      '@typescript-eslint/utils': 8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)
+      debug: 4.4.1(supports-color@7.2.0)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
       ts-api-utils: 2.1.0(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
@@ -5130,11 +5204,11 @@ snapshots:
 
   '@typescript-eslint/types@8.32.1': {}
 
-  '@typescript-eslint/typescript-estree@8.32.1(typescript@5.8.3)':
+  '@typescript-eslint/typescript-estree@8.32.1(supports-color@7.2.0)(typescript@5.8.3)':
     dependencies:
       '@typescript-eslint/types': 8.32.1
       '@typescript-eslint/visitor-keys': 8.32.1
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -5144,13 +5218,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/utils@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
+  '@typescript-eslint/utils@8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)':
     dependencies:
-      '@eslint-community/eslint-utils': 4.7.0(eslint@9.27.0(jiti@2.4.2))
+      '@eslint-community/eslint-utils': 4.7.0(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))
       '@typescript-eslint/scope-manager': 8.32.1
       '@typescript-eslint/types': 8.32.1
-      '@typescript-eslint/typescript-estree': 8.32.1(typescript@5.8.3)
-      eslint: 9.27.0(jiti@2.4.2)
+      '@typescript-eslint/typescript-estree': 8.32.1(supports-color@7.2.0)(typescript@5.8.3)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
       typescript: 5.8.3
     transitivePeerDependencies:
       - supports-color
@@ -5213,15 +5287,15 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.7.2':
     optional: true
 
-  '@wagmi/connectors@5.8.3(@types/react@19.1.5)(@wagmi/core@2.17.2(@tanstack/query-core@5.76.2)(@types/react@19.1.5)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)))(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)':
+  '@wagmi/connectors@5.8.3(@types/react@19.1.5)(@wagmi/core@2.17.2(@tanstack/query-core@5.76.2)(@types/react@19.1.5)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)))(bufferutil@4.0.9)(react@19.1.0)(supports-color@7.2.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)':
     dependencies:
       '@coinbase/wallet-sdk': 4.3.0
-      '@metamask/sdk': 0.32.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@metamask/sdk': 0.32.0(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@safe-global/safe-apps-provider': 0.18.6(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       '@safe-global/safe-apps-sdk': 9.1.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       '@wagmi/core': 2.17.2(@tanstack/query-core@5.76.2)(@types/react@19.1.5)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))
       '@walletconnect/ethereum-provider': 2.20.2(@types/react@19.1.5)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
-      cbw-sdk: '@coinbase/wallet-sdk@3.9.3'
+      cbw-sdk: '@coinbase/wallet-sdk@3.9.3(supports-color@7.2.0)'
       viem: 2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
     optionalDependencies:
       typescript: 5.8.3
@@ -5951,15 +6025,15 @@ snapshots:
       '@walletconnect/window-getters': 1.0.1
       tslib: 1.14.1
 
-  '@web3auth/auth@10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@web3auth/auth@10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@ethereumjs/util': 9.1.0
       '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.1)
-      '@toruslabs/customauth': 21.3.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/customauth': 21.3.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@toruslabs/ffjavascript': 5.0.0
       '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)
-      '@toruslabs/secure-pub-sub': 3.0.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/secure-pub-sub': 3.0.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@toruslabs/session-manager': 4.0.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)
       '@toruslabs/starkware-crypto': 5.0.0(@babel/runtime@7.27.1)
       '@toruslabs/tweetnacl-js': 1.0.4
@@ -5987,15 +6061,15 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@web3auth/modal@10.0.0(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.22.0)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)':
+  '@web3auth/modal@10.0.0(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.22.0)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(supports-color@7.2.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@hcaptcha/react-hcaptcha': 1.12.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
-      '@toruslabs/base-controllers': 8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/base-controllers': 8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)
-      '@web3auth/auth': 10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@web3auth/no-modal': 10.0.0(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.22.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
+      '@web3auth/auth': 10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@web3auth/no-modal': 10.0.0(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.22.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(react@19.1.0)(supports-color@7.2.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
       bowser: 2.11.0
       classnames: 2.5.1
       clsx: 2.1.1
@@ -6039,22 +6113,22 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@web3auth/no-modal@10.0.0(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.22.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)':
+  '@web3auth/no-modal@10.0.0(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.22.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(react@19.1.0)(supports-color@7.2.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@ethereumjs/util': 9.1.0
-      '@metamask/sdk': 0.33.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@metamask/sdk': 0.33.0(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@segment/analytics-next': 1.81.0
       '@solana/wallet-standard-features': 1.3.0
       '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
-      '@toruslabs/base-controllers': 8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/base-controllers': 8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@toruslabs/bs58': 1.0.0(@babel/runtime@7.27.1)
       '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.1)
       '@toruslabs/eccrypto': 6.1.0
-      '@toruslabs/ethereum-controllers': 8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))
+      '@toruslabs/ethereum-controllers': 8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(supports-color@7.2.0)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))
       '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)
       '@toruslabs/loglevel-sentry': 8.1.0(@babel/runtime@7.27.1)
-      '@toruslabs/secure-pub-sub': 3.0.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/secure-pub-sub': 3.0.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@toruslabs/tweetnacl-js': 1.0.4
       '@wallet-standard/app': 1.1.0
       '@wallet-standard/base': 1.1.0
@@ -6062,8 +6136,8 @@ snapshots:
       '@walletconnect/sign-client': 2.20.3(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       '@walletconnect/types': 2.20.3
       '@walletconnect/utils': 2.20.3(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
-      '@web3auth/auth': 10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@web3auth/ws-embed': 5.0.11(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@web3auth/auth': 10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@web3auth/ws-embed': 5.0.11(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       assert: 2.1.0
       bignumber.js: 9.3.0
       bn.js: 5.2.2
@@ -6078,7 +6152,7 @@ snapshots:
       permissionless: 0.2.47(ox@0.6.7(typescript@5.8.3)(zod@3.22.4))(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))
       ripple-keypairs: 1.3.1
       ts-custom-error: 3.3.1
-      xrpl: 2.14.3(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      xrpl: 2.14.3(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
     optionalDependencies:
       '@coinbase/wallet-sdk': 4.3.0
       react: 19.1.0
@@ -6111,11 +6185,11 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@web3auth/ws-embed@5.0.11(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@web3auth/ws-embed@5.0.11(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/runtime': 7.27.1
-      '@toruslabs/base-controllers': 8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@web3auth/auth': 10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/base-controllers': 8.5.1(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@web3auth/auth': 10.4.2(@babel/runtime@7.27.1)(@sentry/core@9.22.0)(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       fast-deep-equal: 3.1.3
       loglevel: 1.9.2
       pump: 3.0.2
@@ -6152,9 +6226,9 @@ snapshots:
 
   aes-js@4.0.0-beta.5: {}
 
-  agent-base@6.0.2:
+  agent-base@6.0.2(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -6365,10 +6439,6 @@ snapshots:
     dependencies:
       node-gyp-build: 4.8.4
 
-  busboy@1.6.0:
-    dependencies:
-      streamsearch: 1.1.0
-
   call-bind-apply-helpers@1.0.2:
     dependencies:
       es-errors: 1.3.0
@@ -6440,21 +6510,9 @@ snapshots:
 
   color-name@2.0.0: {}
 
-  color-string@1.9.1:
-    dependencies:
-      color-name: 1.1.4
-      simple-swizzle: 0.2.2
-    optional: true
-
   color-string@2.0.1:
     dependencies:
       color-name: 2.0.0
-
-  color@4.2.3:
-    dependencies:
-      color-convert: 2.0.1
-      color-string: 1.9.1
-    optional: true
 
   color@5.0.0:
     dependencies:
@@ -6544,17 +6602,23 @@ snapshots:
 
   dayjs@1.11.13: {}
 
-  debug@3.2.7:
+  debug@3.2.7(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
-  debug@4.3.7:
+  debug@4.3.7(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
-  debug@4.4.1:
+  debug@4.4.1(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
   decamelize@1.2.0: {}
 
@@ -6591,6 +6655,9 @@ snapshots:
   detect-browser@5.3.0: {}
 
   detect-libc@2.0.4: {}
+
+  detect-libc@2.1.2:
+    optional: true
 
   dijkstrajs@1.0.3: {}
 
@@ -6645,10 +6712,10 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  engine.io-client@6.6.3(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  engine.io-client@6.6.3(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10):
     dependencies:
       '@socket.io/component-emitter': 3.1.2
-      debug: 4.3.7
+      debug: 4.3.7(supports-color@7.2.0)
       engine.io-parser: 5.2.3
       ws: 8.17.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       xmlhttprequest-ssl: 2.1.2
@@ -6772,19 +6839,19 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-next@15.3.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3):
+  eslint-config-next@15.3.0(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3):
     dependencies:
       '@next/eslint-plugin-next': 15.3.0
       '@rushstack/eslint-patch': 1.11.0
-      '@typescript-eslint/eslint-plugin': 8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
-      '@typescript-eslint/parser': 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
-      eslint: 9.27.0(jiti@2.4.2)
-      eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.27.0(jiti@2.4.2))
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2))
-      eslint-plugin-jsx-a11y: 6.10.2(eslint@9.27.0(jiti@2.4.2))
-      eslint-plugin-react: 7.37.5(eslint@9.27.0(jiti@2.4.2))
-      eslint-plugin-react-hooks: 5.2.0(eslint@9.27.0(jiti@2.4.2))
+      '@typescript-eslint/eslint-plugin': 8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)
+      '@typescript-eslint/parser': 8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
+      eslint-import-resolver-node: 0.3.9(supports-color@7.2.0)
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)
+      eslint-plugin-jsx-a11y: 6.10.2(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))
+      eslint-plugin-react: 7.37.5(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))
+      eslint-plugin-react-hooks: 5.2.0(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))
     optionalDependencies:
       typescript: 5.8.3
     transitivePeerDependencies:
@@ -6792,52 +6859,52 @@ snapshots:
       - eslint-plugin-import-x
       - supports-color
 
-  eslint-import-resolver-node@0.3.9:
+  eslint-import-resolver-node@0.3.9(supports-color@7.2.0):
     dependencies:
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@7.2.0)
       is-core-module: 2.16.1
       resolve: 1.22.10
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0)(eslint@9.27.0(jiti@2.4.2)):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0)(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
-      debug: 4.4.1
-      eslint: 9.27.0(jiti@2.4.2)
+      debug: 4.4.1(supports-color@7.2.0)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
       get-tsconfig: 4.10.1
       is-bun-module: 2.0.0
       stable-hash: 0.0.5
       tinyglobby: 0.2.13
       unrs-resolver: 1.7.2
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2))
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9(supports-color@7.2.0))(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@7.2.0)
     optionalDependencies:
-      '@typescript-eslint/parser': 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
-      eslint: 9.27.0(jiti@2.4.2)
-      eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.27.0(jiti@2.4.2))
+      '@typescript-eslint/parser': 8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
+      eslint-import-resolver-node: 0.3.9(supports-color@7.2.0)
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2)):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.6
       array.prototype.flat: 1.3.3
       array.prototype.flatmap: 1.3.3
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@7.2.0)
       doctrine: 2.1.0
-      eslint: 9.27.0(jiti@2.4.2)
-      eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2))
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
+      eslint-import-resolver-node: 0.3.9(supports-color@7.2.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9(supports-color@7.2.0))(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -6849,13 +6916,13 @@ snapshots:
       string.prototype.trimend: 1.0.9
       tsconfig-paths: 3.15.0
     optionalDependencies:
-      '@typescript-eslint/parser': 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
+      '@typescript-eslint/parser': 8.32.1(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.8.3)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-jsx-a11y@6.10.2(eslint@9.27.0(jiti@2.4.2)):
+  eslint-plugin-jsx-a11y@6.10.2(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0)):
     dependencies:
       aria-query: 5.3.2
       array-includes: 3.1.8
@@ -6865,7 +6932,7 @@ snapshots:
       axobject-query: 4.1.0
       damerau-levenshtein: 1.0.8
       emoji-regex: 9.2.2
-      eslint: 9.27.0(jiti@2.4.2)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
       hasown: 2.0.2
       jsx-ast-utils: 3.3.5
       language-tags: 1.0.9
@@ -6874,11 +6941,11 @@ snapshots:
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-react-hooks@5.2.0(eslint@9.27.0(jiti@2.4.2)):
+  eslint-plugin-react-hooks@5.2.0(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0)):
     dependencies:
-      eslint: 9.27.0(jiti@2.4.2)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
 
-  eslint-plugin-react@7.37.5(eslint@9.27.0(jiti@2.4.2)):
+  eslint-plugin-react@7.37.5(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0)):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlast: 1.2.5
@@ -6886,7 +6953,7 @@ snapshots:
       array.prototype.tosorted: 1.1.4
       doctrine: 2.1.0
       es-iterator-helpers: 1.2.1
-      eslint: 9.27.0(jiti@2.4.2)
+      eslint: 9.27.0(jiti@2.4.2)(supports-color@7.2.0)
       estraverse: 5.3.0
       hasown: 2.0.2
       jsx-ast-utils: 3.3.5
@@ -6909,14 +6976,14 @@ snapshots:
 
   eslint-visitor-keys@4.2.0: {}
 
-  eslint@9.27.0(jiti@2.4.2):
+  eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.7.0(eslint@9.27.0(jiti@2.4.2))
+      '@eslint-community/eslint-utils': 4.7.0(eslint@9.27.0(jiti@2.4.2)(supports-color@7.2.0))
       '@eslint-community/regexpp': 4.12.1
-      '@eslint/config-array': 0.20.0
+      '@eslint/config-array': 0.20.0(supports-color@7.2.0)
       '@eslint/config-helpers': 0.2.2
       '@eslint/core': 0.14.0
-      '@eslint/eslintrc': 3.3.1
+      '@eslint/eslintrc': 3.3.1(supports-color@7.2.0)
       '@eslint/js': 9.27.0
       '@eslint/plugin-kit': 0.3.1
       '@humanfs/node': 0.16.6
@@ -6927,7 +6994,7 @@ snapshots:
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.6
-      debug: 4.4.1
+      debug: 4.4.1(supports-color@7.2.0)
       escape-string-regexp: 4.0.0
       eslint-scope: 8.3.0
       eslint-visitor-keys: 4.2.0
@@ -6969,11 +7036,11 @@ snapshots:
 
   esutils@2.0.3: {}
 
-  eth-block-tracker@7.1.0:
+  eth-block-tracker@7.1.0(supports-color@7.2.0):
     dependencies:
-      '@metamask/eth-json-rpc-provider': 1.0.1
+      '@metamask/eth-json-rpc-provider': 1.0.1(supports-color@7.2.0)
       '@metamask/safe-event-emitter': 3.1.2
-      '@metamask/utils': 5.0.2
+      '@metamask/utils': 5.0.2(supports-color@7.2.0)
       json-rpc-random-id: 1.0.1
       pify: 3.0.0
     transitivePeerDependencies:
@@ -7229,10 +7296,10 @@ snapshots:
     dependencies:
       void-elements: 3.1.0
 
-  https-proxy-agent@5.0.1:
+  https-proxy-agent@5.0.1(supports-color@7.2.0):
     dependencies:
-      agent-base: 6.0.2
-      debug: 4.4.1
+      agent-base: 6.0.2(supports-color@7.2.0)
+      debug: 4.4.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -7281,9 +7348,6 @@ snapshots:
       call-bind: 1.0.8
       call-bound: 1.0.4
       get-intrinsic: 1.3.0
-
-  is-arrayish@0.3.2:
-    optional: true
 
   is-async-function@2.1.1:
     dependencies:
@@ -7667,29 +7731,28 @@ snapshots:
     dependencies:
       '@segment/isodate': 1.0.3
 
-  next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  next@15.5.28(@types/node@20.17.50)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
-      '@next/env': 15.3.0
-      '@swc/counter': 0.1.3
+      '@next/env': 15.5.28
       '@swc/helpers': 0.5.15
-      busboy: 1.6.0
       caniuse-lite: 1.0.30001718
       postcss: 8.4.31
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
       styled-jsx: 5.1.6(react@19.1.0)
     optionalDependencies:
-      '@next/swc-darwin-arm64': 15.3.0
-      '@next/swc-darwin-x64': 15.3.0
-      '@next/swc-linux-arm64-gnu': 15.3.0
-      '@next/swc-linux-arm64-musl': 15.3.0
-      '@next/swc-linux-x64-gnu': 15.3.0
-      '@next/swc-linux-x64-musl': 15.3.0
-      '@next/swc-win32-arm64-msvc': 15.3.0
-      '@next/swc-win32-x64-msvc': 15.3.0
-      sharp: 0.34.2
+      '@next/swc-darwin-arm64': 15.5.28
+      '@next/swc-darwin-x64': 15.5.28
+      '@next/swc-linux-arm64-gnu': 15.5.28
+      '@next/swc-linux-arm64-musl': 15.5.28
+      '@next/swc-linux-x64-gnu': 15.5.28
+      '@next/swc-linux-x64-musl': 15.5.28
+      '@next/swc-win32-arm64-msvc': 15.5.28
+      '@next/swc-win32-x64-msvc': 15.5.28
+      sharp: 0.35.5(@types/node@20.17.50)
     transitivePeerDependencies:
       - '@babel/core'
+      - '@types/node'
       - babel-plugin-macros
 
   node-addon-api@2.0.2: {}
@@ -8147,6 +8210,9 @@ snapshots:
 
   semver@7.7.2: {}
 
+  semver@7.8.5:
+    optional: true
+
   set-blocking@2.0.0: {}
 
   set-function-length@1.2.2:
@@ -8176,33 +8242,38 @@ snapshots:
       inherits: 2.0.4
       safe-buffer: 5.2.1
 
-  sharp@0.34.2:
+  sharp@0.35.5(@types/node@20.17.50):
     dependencies:
-      color: 4.2.3
-      detect-libc: 2.0.4
-      semver: 7.7.2
+      '@img/colour': 1.1.0
+      detect-libc: 2.1.2
+      semver: 7.8.5
     optionalDependencies:
-      '@img/sharp-darwin-arm64': 0.34.2
-      '@img/sharp-darwin-x64': 0.34.2
-      '@img/sharp-libvips-darwin-arm64': 1.1.0
-      '@img/sharp-libvips-darwin-x64': 1.1.0
-      '@img/sharp-libvips-linux-arm': 1.1.0
-      '@img/sharp-libvips-linux-arm64': 1.1.0
-      '@img/sharp-libvips-linux-ppc64': 1.1.0
-      '@img/sharp-libvips-linux-s390x': 1.1.0
-      '@img/sharp-libvips-linux-x64': 1.1.0
-      '@img/sharp-libvips-linuxmusl-arm64': 1.1.0
-      '@img/sharp-libvips-linuxmusl-x64': 1.1.0
-      '@img/sharp-linux-arm': 0.34.2
-      '@img/sharp-linux-arm64': 0.34.2
-      '@img/sharp-linux-s390x': 0.34.2
-      '@img/sharp-linux-x64': 0.34.2
-      '@img/sharp-linuxmusl-arm64': 0.34.2
-      '@img/sharp-linuxmusl-x64': 0.34.2
-      '@img/sharp-wasm32': 0.34.2
-      '@img/sharp-win32-arm64': 0.34.2
-      '@img/sharp-win32-ia32': 0.34.2
-      '@img/sharp-win32-x64': 0.34.2
+      '@img/sharp-darwin-arm64': 0.35.5
+      '@img/sharp-darwin-x64': 0.35.5
+      '@img/sharp-freebsd-wasm32': 0.35.5
+      '@img/sharp-libvips-darwin-arm64': 1.3.4
+      '@img/sharp-libvips-darwin-x64': 1.3.4
+      '@img/sharp-libvips-linux-arm': 1.3.4
+      '@img/sharp-libvips-linux-arm64': 1.3.4
+      '@img/sharp-libvips-linux-ppc64': 1.3.4
+      '@img/sharp-libvips-linux-riscv64': 1.3.4
+      '@img/sharp-libvips-linux-s390x': 1.3.4
+      '@img/sharp-libvips-linux-x64': 1.3.4
+      '@img/sharp-libvips-linuxmusl-arm64': 1.3.4
+      '@img/sharp-libvips-linuxmusl-x64': 1.3.4
+      '@img/sharp-linux-arm': 0.35.5
+      '@img/sharp-linux-arm64': 0.35.5
+      '@img/sharp-linux-ppc64': 0.35.5
+      '@img/sharp-linux-riscv64': 0.35.5
+      '@img/sharp-linux-s390x': 0.35.5
+      '@img/sharp-linux-x64': 0.35.5
+      '@img/sharp-linuxmusl-arm64': 0.35.5
+      '@img/sharp-linuxmusl-x64': 0.35.5
+      '@img/sharp-webcontainers-wasm32': 0.35.5
+      '@img/sharp-win32-arm64': 0.35.5
+      '@img/sharp-win32-ia32': 0.35.5
+      '@img/sharp-win32-x64': 0.35.5
+      '@types/node': 20.17.50
     optional: true
 
   shebang-command@2.0.0:
@@ -8239,26 +8310,21 @@ snapshots:
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
 
-  simple-swizzle@0.2.2:
-    dependencies:
-      is-arrayish: 0.3.2
-    optional: true
-
-  socket.io-client@4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  socket.io-client@4.8.1(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10):
     dependencies:
       '@socket.io/component-emitter': 3.1.2
-      debug: 4.3.7
-      engine.io-client: 6.6.3(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      socket.io-parser: 4.2.4
+      debug: 4.3.7(supports-color@7.2.0)
+      engine.io-client: 6.6.3(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      socket.io-parser: 4.2.4(supports-color@7.2.0)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  socket.io-parser@4.2.4:
+  socket.io-parser@4.2.4(supports-color@7.2.0):
     dependencies:
       '@socket.io/component-emitter': 3.1.2
-      debug: 4.3.7
+      debug: 4.3.7(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -8281,8 +8347,6 @@ snapshots:
       stream-chain: 2.2.5
 
   stream-shift@1.0.3: {}
-
-  streamsearch@1.1.0: {}
 
   strict-uri-encode@2.0.0: {}
 
@@ -8618,10 +8682,10 @@ snapshots:
 
   void-elements@3.1.0: {}
 
-  wagmi@2.15.4(@tanstack/query-core@5.76.2)(@tanstack/react-query@5.76.2(react@19.1.0))(@types/react@19.1.5)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4):
+  wagmi@2.15.4(@tanstack/query-core@5.76.2)(@tanstack/react-query@5.76.2(react@19.1.0))(@types/react@19.1.5)(bufferutil@4.0.9)(react@19.1.0)(supports-color@7.2.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4):
     dependencies:
       '@tanstack/react-query': 5.76.2(react@19.1.0)
-      '@wagmi/connectors': 5.8.3(@types/react@19.1.5)(@wagmi/core@2.17.2(@tanstack/query-core@5.76.2)(@types/react@19.1.5)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)))(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
+      '@wagmi/connectors': 5.8.3(@types/react@19.1.5)(@wagmi/core@2.17.2(@tanstack/query-core@5.76.2)(@types/react@19.1.5)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)))(bufferutil@4.0.9)(react@19.1.0)(supports-color@7.2.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))(zod@3.22.4)
       '@wagmi/core': 2.17.2(@tanstack/query-core@5.76.2)(@types/react@19.1.5)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.30.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4))
       react: 19.1.0
       use-sync-external-store: 1.4.0(react@19.1.0)
@@ -8767,12 +8831,12 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  xrpl@2.14.3(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  xrpl@2.14.3(bufferutil@4.0.9)(supports-color@7.2.0)(utf-8-validate@5.0.10):
     dependencies:
       bignumber.js: 9.3.0
       bip32: 2.0.6
       bip39: 3.1.0
-      https-proxy-agent: 5.0.1
+      https-proxy-agent: 5.0.1(supports-color@7.2.0)
       lodash: 4.17.21
       ripple-address-codec: 4.3.1
       ripple-binary-codec: 1.11.0
